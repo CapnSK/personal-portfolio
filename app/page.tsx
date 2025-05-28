@@ -66,7 +66,7 @@ export default function Home() {
                   <span className="sr-only">GitHub</span>
                 </Button>
               </Link>
-              <Link href="https://linkedin.com/in/CapnSK" target="_blank" rel="noopener noreferrer">
+              <Link href="https://www.linkedin.com/in/capnsk21/" target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="icon">
                   <Linkedin className="h-5 w-5" />
                   <span className="sr-only">LinkedIn</span>
@@ -284,7 +284,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center">
                     <Linkedin className="h-5 w-5 mr-2 text-primary" />
-                    <span>linkedin.com/in/CapnSK</span>
+                    <span>linkedin.com/in/capnsk21/</span>
                   </div>
                   <div className="flex items-center">
                     <Github className="h-5 w-5 mr-2 text-primary" />
