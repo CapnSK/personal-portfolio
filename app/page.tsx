@@ -213,7 +213,7 @@ export default function Home() {
                     "A fitness tracking application with workout planning, progress monitoring, and nutrition tracking capabilities for health enthusiasts.",
                   // image: "/placeholder.svg?height=250&width=500&text=FitnesPal",
                   tags: ["React Native", "TypeScript", "Firebase", "Redux"],
-                  github: "https://github.com/CapnSK/fitnespal",
+                  github: "https://github.com/CapnSK/fitnesspal",
                   demo: "#",
                 },
               ].map((project) => (

@@ -34,7 +34,7 @@ export default function ProjectsPage() {
         "A comprehensive fitness tracking mobile application designed for health enthusiasts. Features workout planning, exercise tracking, nutrition monitoring, progress analytics, and social challenges. Includes barcode scanning for food items, custom workout creation, and integration with wearable devices.",
       image: "/placeholder.svg?height=250&width=500&text=FitnesPal",
       tags: ["React Native", "TypeScript", "Firebase", "Redux", "Expo", "Health APIs"],
-      github: "https://github.com/CapnSK/fitnespal",
+      github: "https://github.com/CapnSK/fitnesspal",
       demo: "#",
     },
     {
