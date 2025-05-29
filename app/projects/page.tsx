@@ -95,10 +95,31 @@ export default function ProjectsPage() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
             <Card key={project.id} className="overflow-hidden">
-              <div className="relative aspect-video">
-                <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
+              <div className="relative aspect-video" style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                // minHeight: '100vh',
+                height: "13em",
+                backgroundColor: '#000',
+                width: '100%',
+              }}>
+                <video
+                  src={"/under_construction_animation.webm"}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="object-cover"
+                  style={{
+                    width: '100%',
+                    maxWidth: '800px',
+                    height: 'auto',
+                    objectFit: 'cover',
+                  }}
+                />
               </div>
-              <CardContent className="p-4 space-y-2">
+              <CardContent className="p-4 mt-5 space-y-2">
                 <h3 className="font-bold text-xl">{project.title}</h3>
                 <p className="text-muted-foreground">{project.description}</p>
                 <div className="flex flex-wrap gap-2 pt-2">

@@ -82,7 +82,7 @@ export default function Home() {
           <div className="md:w-1/2 flex justify-center">
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary">
               <Image
-                src="/placeholder.svg?height=320&width=320"
+                src="/ghibli_Sk.png?height=320&width=320"
                 alt="Sankalp Kulkarni"
                 fill
                 className="object-cover"
@@ -191,7 +191,7 @@ export default function Home() {
                   title: "Trivia Titans",
                   description:
                     "A multi-player online trivia game allowing players to collaborate during gameplay with real-time synchronization and live chat features.",
-                  image: "/placeholder.svg?height=250&width=500&text=Trivia+Titans",
+                  // image: "/placeholder.svg?height=250&width=500&text=Trivia+Titans",
                   tags: ["Node.js", "Python", "AWS Lambda", "React", "Kafka"],
                   github: "https://github.com/CapnSK/trivia-titans",
                   demo: "#",
@@ -201,7 +201,7 @@ export default function Home() {
                   title: "Paw Pals",
                   description:
                     "A comprehensive pet care and social platform connecting pet owners, featuring pet profiles, care tracking, and community features.",
-                  image: "/placeholder.svg?height=250&width=500&text=Paw+Pals",
+                  // image: "/placeholder.svg?height=250&width=500&text=Paw+Pals",
                   tags: ["React", "Node.js", "MongoDB", "Express"],
                   github: "https://github.com/CapnSK/paw-pals",
                   demo: "#",
@@ -211,22 +211,38 @@ export default function Home() {
                   title: "FitnesPal",
                   description:
                     "A fitness tracking application with workout planning, progress monitoring, and nutrition tracking capabilities for health enthusiasts.",
-                  image: "/placeholder.svg?height=250&width=500&text=FitnesPal",
+                  // image: "/placeholder.svg?height=250&width=500&text=FitnesPal",
                   tags: ["React Native", "TypeScript", "Firebase", "Redux"],
                   github: "https://github.com/CapnSK/fitnespal",
                   demo: "#",
                 },
               ].map((project) => (
                 <Card key={project.id} className="overflow-hidden">
-                  <div className="relative aspect-video">
-                    <Image
-                      src={project.image || "/placeholder.svg"}
-                      alt={project.title}
-                      fill
+                  <div className="relative aspect-video" style={{
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      // minHeight: '100vh',
+                      height: "13em",
+                      backgroundColor: '#000',
+                      width: '100%',
+                    }}>
+                    <video
+                      src={ "/under_construction_animation.webm"}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
                       className="object-cover"
+                      style={{
+                        width: '100%',
+                        maxWidth: '800px',
+                        height: 'auto',
+                        objectFit: 'cover',
+                      }}
                     />
                   </div>
-                  <CardContent className="p-4 space-y-2">
+                  <CardContent className="p-4 mt-5 space-y-2">
                     <h3 className="font-bold text-xl">{project.title}</h3>
                     <p className="text-muted-foreground">{project.description}</p>
                     <div className="flex flex-wrap gap-2 pt-2">
