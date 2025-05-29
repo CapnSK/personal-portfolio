@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Github, Linkedin, Mail, FileText, ExternalLink } from 'lucide-react'
+import { Github, Linkedin, Mail, FileText, ExternalLink } from "lucide-react"
 
 export default function Home() {
   return (
@@ -31,9 +31,7 @@ export default function Home() {
             </Link>
           </nav>
           <Button asChild>
-            <Link href="#contact">
-              Get in Touch
-            </Link>
+            <Link href="#contact">Get in Touch</Link>
           </Button>
         </div>
       </header>
@@ -46,7 +44,8 @@ export default function Home() {
               Hi, I'm <span className="text-primary">Sankalp Kulkarni</span>
             </h1>
             <p className="text-xl text-muted-foreground md:text-2xl">
-              A passionate Full Stack Developer with expertise in JavaScript, TypeScript, React, Angular, and Cloud Technologies
+              A passionate Full Stack Developer with expertise in JavaScript, TypeScript, React, Angular, and Cloud
+              Technologies
             </p>
             <div className="flex gap-4">
               <Button asChild>
@@ -66,7 +65,7 @@ export default function Home() {
                   <span className="sr-only">GitHub</span>
                 </Button>
               </Link>
-              <Link href="https://www.linkedin.com/in/capnsk21/" target="_blank" rel="noopener noreferrer">
+              <Link href="https://linkedin.com/in/CapnSK" target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="icon">
                   <Linkedin className="h-5 w-5" />
                   <span className="sr-only">LinkedIn</span>
@@ -82,10 +81,10 @@ export default function Home() {
           </div>
           <div className="md:w-1/2 flex justify-center">
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary">
-              <Image 
-                src="/placeholder.svg?height=320&width=320" 
-                alt="Sankalp Kulkarni" 
-                fill 
+              <Image
+                src="/placeholder.svg?height=320&width=320"
+                alt="Sankalp Kulkarni"
+                fill
                 className="object-cover"
                 priority
               />
@@ -103,15 +102,18 @@ export default function Home() {
             <div className="grid gap-6 md:grid-cols-2">
               <div className="space-y-4">
                 <p>
-                  I'm a Full Stack Developer with 4+ years of experience specializing in modern web technologies and cloud solutions. 
-                  I'm passionate about creating efficient, scalable applications and dedicated to solving complex technical challenges.
+                  I'm a Full Stack Developer with 4+ years of experience specializing in modern web technologies and
+                  cloud solutions. I'm passionate about creating efficient, scalable applications and dedicated to
+                  solving complex technical challenges.
                 </p>
                 <p>
-                  My background includes working with top-tier companies like Canada Revenue Agency and Tata Consultancy Services. 
-                  I approach each project with a focus on performance optimization and user experience, striving to deliver high-quality solutions.
+                  My background includes working with top-tier companies like Canada Revenue Agency and Tata Consultancy
+                  Services. I approach each project with a focus on performance optimization and user experience,
+                  striving to deliver high-quality solutions.
                 </p>
                 <p>
-                  I hold a Master's in Applied Computer Science from Dalhousie University and am AWS Certified Solutions Architect-Associate.
+                  I hold a Master's in Applied Computer Science from Dalhousie University and am AWS Certified Solutions
+                  Architect-Associate.
                 </p>
               </div>
               <div className="flex items-center justify-center">
@@ -147,9 +149,25 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {[
-                "JavaScript (ES6)", "TypeScript", "Node.js", "Java", "Python", "React", 
-                "Angular", "RxJS", "HTML/SCSS", "AWS", "Azure", "Docker", "Kubernetes",
-                "Spring Boot", "Apache Kafka", "GraphQL", "Git", "Jenkins", "OpenCV"
+                "JavaScript (ES6)",
+                "TypeScript",
+                "Node.js",
+                "Java",
+                "Python",
+                "React",
+                "Angular",
+                "RxJS",
+                "HTML/SCSS",
+                "AWS",
+                "Azure",
+                "Docker",
+                "Kubernetes",
+                "Spring Boot",
+                "Apache Kafka",
+                "GraphQL",
+                "Git",
+                "Jenkins",
+                "OpenCV",
               ].map((skill) => (
                 <div key={skill} className="bg-background p-4 rounded-lg shadow-sm border">
                   <p className="font-medium">{skill}</p>
@@ -167,35 +185,66 @@ export default function Home() {
               <p className="text-muted-foreground">Some of my recent work</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[1, 2, 3].map((project) => (
-                <Card key={project} className="overflow-hidden">
+              {[
+                {
+                  id: 1,
+                  title: "Trivia Titans",
+                  description:
+                    "A multi-player online trivia game allowing players to collaborate during gameplay with real-time synchronization and live chat features.",
+                  image: "/placeholder.svg?height=250&width=500&text=Trivia+Titans",
+                  tags: ["Node.js", "Python", "AWS Lambda", "React", "Kafka"],
+                  github: "https://github.com/CapnSK/trivia-titans",
+                  demo: "#",
+                },
+                {
+                  id: 2,
+                  title: "Paw Pals",
+                  description:
+                    "A comprehensive pet care and social platform connecting pet owners, featuring pet profiles, care tracking, and community features.",
+                  image: "/placeholder.svg?height=250&width=500&text=Paw+Pals",
+                  tags: ["React", "Node.js", "MongoDB", "Express"],
+                  github: "https://github.com/CapnSK/paw-pals",
+                  demo: "#",
+                },
+                {
+                  id: 3,
+                  title: "FitnesPal",
+                  description:
+                    "A fitness tracking application with workout planning, progress monitoring, and nutrition tracking capabilities for health enthusiasts.",
+                  image: "/placeholder.svg?height=250&width=500&text=FitnesPal",
+                  tags: ["React Native", "TypeScript", "Firebase", "Redux"],
+                  github: "https://github.com/CapnSK/fitnespal",
+                  demo: "#",
+                },
+              ].map((project) => (
+                <Card key={project.id} className="overflow-hidden">
                   <div className="relative aspect-video">
-                    <Image 
-                      src={`/placeholder.svg?height=250&width=500&text=Project+${project}`} 
-                      alt={`Project ${project}`} 
-                      fill 
+                    <Image
+                      src={project.image || "/placeholder.svg"}
+                      alt={project.title}
+                      fill
                       className="object-cover"
                     />
                   </div>
                   <CardContent className="p-4 space-y-2">
-                    <h3 className="font-bold text-xl">Project Title {project}</h3>
-                    <p className="text-muted-foreground">
-                      A brief description of this project, what technologies were used, and what problems it solved.
-                    </p>
+                    <h3 className="font-bold text-xl">{project.title}</h3>
+                    <p className="text-muted-foreground">{project.description}</p>
                     <div className="flex flex-wrap gap-2 pt-2">
-                      <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">React</span>
-                      <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Next.js</span>
-                      <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Tailwind</span>
+                      {project.tags.map((tag) => (
+                        <span key={tag} className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">
+                          {tag}
+                        </span>
+                      ))}
                     </div>
                     <div className="flex gap-2 pt-4">
                       <Button size="sm" variant="outline" asChild>
-                        <Link href="#" target="_blank">
+                        <Link href={project.github} target="_blank">
                           <Github className="mr-2 h-4 w-4" />
                           Code
                         </Link>
                       </Button>
                       <Button size="sm" asChild>
-                        <Link href="#" target="_blank">
+                        <Link href={project.demo} target="_blank">
                           <ExternalLink className="mr-2 h-4 w-4" />
                           Demo
                         </Link>
@@ -226,20 +275,23 @@ export default function Home() {
                   title: "IT Developer",
                   company: "Canada Revenue Agency",
                   period: "Jan 2024 - Dec 2024",
-                  description: "Developed asset management plugin using Python, reducing DDoS false positives by 99.98%. Migrated web applications from Struts to Angular, optimized codebases, and eliminated memory leaks."
+                  description:
+                    "Developed asset management plugin using Python, reducing DDoS false positives by 99.98%. Migrated web applications from Struts to Angular, optimized codebases, and eliminated memory leaks.",
                 },
                 {
                   title: "Full Stack Web Developer",
                   company: "Tata Consultancy Services",
                   period: "Aug 2020 - July 2022",
-                  description: "Built content transformation engine with OpenCV, implemented caching strategies, developed reusable widgets, and created testing governance framework with 85% network congestion reduction."
+                  description:
+                    "Built content transformation engine with OpenCV, implemented caching strategies, developed reusable widgets, and created testing governance framework with 85% network congestion reduction.",
                 },
                 {
                   title: "Full Stack Web Developer",
                   company: "Virtusa Consultancy Services",
                   period: "June 2019 - July 2019",
-                  description: "Built facial recognition application with 85% accuracy using Java and OpenCV. Designed admin dashboard with React and managed authentication using MySQL, Firebase, and AWS S3."
-                }
+                  description:
+                    "Built facial recognition application with 85% accuracy using Java and OpenCV. Designed admin dashboard with React and managed authentication using MySQL, Firebase, and AWS S3.",
+                },
               ].map((job, index) => (
                 <div key={index} className="relative pl-8 border-l-2 border-muted-foreground/20">
                   <div className="absolute w-4 h-4 bg-primary rounded-full -left-[9px] top-1"></div>
@@ -273,9 +325,8 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-4">
                 <p>
-                  I'm currently available for freelance work and full-time positions. 
-                  If you have a project that needs some creative work, or if you're looking 
-                  to hire, please don't hesitate to contact me.
+                  I'm currently available for freelance work and full-time positions. If you have a project that needs
+                  some creative work, or if you're looking to hire, please don't hesitate to contact me.
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-center">
@@ -284,7 +335,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center">
                     <Linkedin className="h-5 w-5 mr-2 text-primary" />
-                    <span>linkedin.com/in/capnsk21/</span>
+                    <span>linkedin.com/in/CapnSK</span>
                   </div>
                   <div className="flex items-center">
                     <Github className="h-5 w-5 mr-2 text-primary" />
@@ -295,7 +346,9 @@ export default function Home() {
               <form className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium">Name</label>
+                    <label htmlFor="name" className="text-sm font-medium">
+                      Name
+                    </label>
                     <input
                       id="name"
                       className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
@@ -303,7 +356,9 @@ export default function Home() {
                     />
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium">Email</label>
+                    <label htmlFor="email" className="text-sm font-medium">
+                      Email
+                    </label>
                     <input
                       id="email"
                       type="email"
@@ -313,7 +368,9 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="subject" className="text-sm font-medium">Subject</label>
+                  <label htmlFor="subject" className="text-sm font-medium">
+                    Subject
+                  </label>
                   <input
                     id="subject"
                     className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
@@ -321,14 +378,18 @@ export default function Home() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium">Message</label>
+                  <label htmlFor="message" className="text-sm font-medium">
+                    Message
+                  </label>
                   <textarea
                     id="message"
                     className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                     placeholder="Your message"
                   />
                 </div>
-                <Button type="submit" className="w-full">Send Message</Button>
+                <Button type="submit" className="w-full">
+                  Send Message
+                </Button>
               </form>
             </div>
           </div>
