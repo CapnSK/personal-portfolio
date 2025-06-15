@@ -31,5 +31,5 @@ This project is optimized for deployment on Vercel. Simply connect your GitHub r
 ## Contact
 
 - Email: kulkarnisankalp21@gmail.com
-- LinkedIn: [CapnSK](https://linkedin.com/in/CapnSK)
+- LinkedIn: [CapnSK](https://linkedin.com/in/CapnSK21)
 - GitHub: [CapnSK](https://github.com/CapnSK)
